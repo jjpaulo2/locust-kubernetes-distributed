@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "locust-tests"
+version = "0.1.0"
+description = ""
+authors = ["João Paulo Carvalho <jjpaulo2@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+locust = "^2.13.0"
+Faker = "^15.1.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.15.5"
+jedi = "^0.18.1"
+bandit = "^1.7.4"
+mypy = "^0.982"
+ipdb = "^0.13.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+disable = [
+    "missing-docstring"
+]

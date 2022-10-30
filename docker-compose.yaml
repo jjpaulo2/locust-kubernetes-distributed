@@ -6,4 +6,10 @@ services:
     build: ./django-crud-api
     ports:
       - 8880:80
+
+  locust-master:
+    container_name: locust-tests-master
+    build: ./locust-tests-master
+    ports:
+      - 8881:8881
       

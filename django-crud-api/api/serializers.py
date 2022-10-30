@@ -1,4 +1,4 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
+from rest_framework.serializers import ModelSerializer
 
 from api.models import (
     Author,
@@ -8,25 +8,25 @@ from api.models import (
 )
 
 
-class AuthorSerializer(HyperlinkedModelSerializer):
+class AuthorSerializer(ModelSerializer):
     class Meta:
         model = Author
-        fields = ('name', 'birth_date')
+        fields = ('pk', 'name', 'birth_date')
 
 
-class BookSerializer(HyperlinkedModelSerializer):
+class BookSerializer(ModelSerializer):
     class Meta:
         model = Book
-        fields = ('title', 'subtitle', 'author')
+        fields = ('pk', 'title', 'subtitle', 'author')
 
 
-class ConsumerSerializer(HyperlinkedModelSerializer):
+class ConsumerSerializer(ModelSerializer):
     class Meta:
         model = Consumer
-        fields = ('name', 'birth_date', 'document_cpf')
+        fields = ('pk', 'name', 'birth_date', 'document_cpf')
 
 
-class OrderSerializer(HyperlinkedModelSerializer):
+class OrderSerializer(ModelSerializer):
     class Meta:
         model = Order
-        fields = ('consumer', 'book', 'price')
+        fields = ('pk', 'consumer', 'book', 'price')
