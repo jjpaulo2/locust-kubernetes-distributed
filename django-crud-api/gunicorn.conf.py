@@ -8,3 +8,4 @@ worker_class = 'sync'
 worker_connections = 1000
 timeout = 30
 keepalive = 1
+statsd_host = 'statsd-exporter:9125'
