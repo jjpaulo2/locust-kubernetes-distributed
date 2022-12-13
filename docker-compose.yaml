@@ -5,6 +5,8 @@ services:
     build: ./django-crud-api
     ports:
       - 8880:80
+    depends_on:
+      - statsd-exporter
 
   locust-master:
     build: 
@@ -25,4 +27,15 @@ services:
     deploy:
       mode: replicated
       replicas: 5
-      
+
+  statsd-exporter:
+    build: ./prometheus/exporters/statsd
+    ports:
+      - "8884:9102"
+
+  prometheus:
+    build: ./prometheus
+    ports:
+      - 8883:9090
+    depends_on:
+      - statsd-exporter
