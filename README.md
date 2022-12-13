@@ -39,16 +39,16 @@ Comming soon. See [#4](https://github.com/jjpaulo2/locust-kubernetes-distributed
 
 #### Django RESTful API Swagger UI
 
-![](./screenshots/api-swagger.png)
+![](./.screenshots/api-swagger.png)
 
 #### Locust UI
 
-![](./screenshots/locust-ui.png)
+![](./.screenshots/locust-ui.png)
 
 #### Grafana Gunicorn Dashboard
 
-![](./screenshots/gunicorn-dashboard.png)
+![](./.screenshots/gunicorn-dashboard.png)
 
 #### Grafana Locust Dashboard
 
-![](./screenshots/locust-dashboard.png)
+![](./.screenshots/locust-dashboard.png)
