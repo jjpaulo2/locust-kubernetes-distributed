@@ -45,3 +45,10 @@ services:
     depends_on:
       - statsd-exporter
       - locust-exporter
+
+  grafana:
+    build: ./grafana
+    ports:
+      - 8886:3000
+    depends_on:
+      - prometheus
