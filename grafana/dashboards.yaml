@@ -1,0 +1,19 @@
+apiVersion: 1
+
+providers:
+
+- name: 'Gunicorn - Django REST API'
+  orgId: 1
+  type: 'file'
+  disableDeletion: true
+  editable: true
+  options:
+    path: '/etc/grafana/dashboards/gunicorn-django.json'
+
+- name: 'Locust - Load Testing'
+  orgId: 1
+  type: 'file'
+  disableDeletion: true
+  editable: true
+  options:
+    path: '/etc/grafana/dashboards/locust.json'
