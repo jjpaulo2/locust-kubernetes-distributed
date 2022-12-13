@@ -3,6 +3,7 @@ FROM python:3.10-alpine
 COPY ./requirements.txt /srv
 COPY ./worker.conf /srv
 COPY ./worker.sh /srv
+COPY ./tests /srv/tests
 
 WORKDIR /srv
 
