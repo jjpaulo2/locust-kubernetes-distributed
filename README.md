@@ -15,12 +15,5 @@ $ docker compose up --build -d
 Now, go to the endress bellow:
 
 - http://0.0.0.0:8880/ - Django CRUD API
+- http://0.0.0.0:8880/admin - Django admin for CRUD API (user `admin` / pass `123`)
 - http://0.0.0.0:8881/ - Locust Master Front-end
-
-To login into **Django admin** interface, use the credencials bellow:
-
-| Info | Value |
-|-|-|
-| URL | http://0.0.0.0:8880/admin |
-| User | admin |
-| Password | 123 |
