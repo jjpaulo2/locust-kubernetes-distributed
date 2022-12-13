@@ -20,3 +20,4 @@ Now, go to the endress bellow:
 - http://0.0.0.0:8883/metrics - Metrics from Locust server
 - http://0.0.0.0:8884/metrics - Metrics from Django API Gunicorn server
 - http://0.0.0.0:8885/graph - Prometheus front-end
+- http://0.0.0.0:8886/ - Grafana
