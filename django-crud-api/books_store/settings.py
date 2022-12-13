@@ -18,8 +18,8 @@ STATIC_ROOT = f"{BASE_DIR}/static"
 ALLOWED_HOSTS = [
     '0.0.0.0',
     '0.0.0.0:8881',
-    'django-crud-api-app',
-    'django-crud-api-nginx',
+    'api',
+    'api:8881'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
