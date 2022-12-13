@@ -7,7 +7,7 @@ COPY ./tests /srv/tests
 
 WORKDIR /srv
 
-RUN apk add --update alpine-sdk linux-headers
+RUN apk add --update alpine-sdk linux-headers libffi-dev
 RUN pip install -r requirements.txt --upgrade
 
 EXPOSE 8881
