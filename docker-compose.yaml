@@ -8,14 +8,19 @@ services:
 
   locust-master:
     build: 
-      dockerfile: ./locust-tests/master.dockerfile
+      context: ./locust-tests
+      dockerfile: master.dockerfile
+    depends_on:
+      - api
     ports:
       - 8881:8881
 
   locust-worker:
-    build: 
-      dockerfile: ./locust-tests/worker.dockerfile
+    build:
+      context: ./locust-tests
+      dockerfile: worker.dockerfile
     depends_on:
+      - api
       - locust-master
     deploy:
       mode: replicated
