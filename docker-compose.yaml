@@ -2,14 +2,22 @@ version: '3.9'
 
 services:
   api:
-    container_name: django-crud-api
     build: ./django-crud-api
     ports:
       - 8880:80
 
   locust-master:
-    container_name: locust-tests-master
-    build: ./locust-tests-master
+    build: 
+      dockerfile: ./locust-tests/master.dockerfile
     ports:
       - 8881:8881
+
+  locust-worker:
+    build: 
+      dockerfile: ./locust-tests/worker.dockerfile
+    depends_on:
+      - locust-master
+    deploy:
+      mode: replicated
+      replicas: 5
       
