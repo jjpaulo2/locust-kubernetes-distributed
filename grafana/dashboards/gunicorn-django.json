@@ -25,14 +25,13 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "uVJMgvcVz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -124,7 +123,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "uVJMgvcVz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -241,7 +240,7 @@
             "uid": "uVJMgvcVz"
           },
           "editorMode": "builder",
-          "expr": "rate(gunicorn_request_status_404[$__rate_interval])",
+          "expr": "rate(gunicorn_request_status_404[1m])",
           "hide": false,
           "legendFormat": "404",
           "range": true,
@@ -254,7 +253,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "uVJMgvcVz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -334,10 +333,11 @@
             "uid": "uVJMgvcVz"
           },
           "editorMode": "builder",
-          "expr": "gunicorn_request_duration",
+          "exemplar": false,
+          "expr": "rate(gunicorn_request_duration[1m])",
           "instant": true,
           "key": "Q-c92dd8b8-02db-4729-a5c3-ee31161cdb69-0",
-          "legendFormat": "{{__name__}}_{{quantile}}",
+          "legendFormat": "percent_{{quantile}}",
           "range": true,
           "refId": "A"
         }
@@ -354,13 +354,13 @@
     "list": []
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Gunicorn - Django REST API",
   "uid": "GNEXRD5Vk",
-  "version": 3,
+  "version": 1,
   "weekStart": ""
 }
