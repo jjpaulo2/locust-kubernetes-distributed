@@ -14,7 +14,7 @@ $ docker compose up --build -d
 
 Comming soon. See [#4](https://github.com/jjpaulo2/locust-kubernetes-distributed/issues/4).
 
-### Accessing
+## Accessing
 
 #### Django RESTful API
 
