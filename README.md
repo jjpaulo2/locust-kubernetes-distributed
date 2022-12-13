@@ -2,34 +2,34 @@
 
 A complete ecosystem runing in Kubernetes, to show how to use Locust to do distributed load tests.
 
-## Running
+### Running
 
-### Docker compose
+#### Docker compose
 
 ```shell
 $ docker compose up --build -d
 ```
 
-### Kubernetes
+#### Kubernetes
 
-Comming soon. See #4.
+Comming soon. See [#4](https://github.com/jjpaulo2/locust-kubernetes-distributed/issues/4).
 
-## Accessing
+### Accessing
 
-### Django RESTful API
+#### Django RESTful API
 
 - http://0.0.0.0:8880/swagger - Django CRUD API Swagger
 - http://0.0.0.0:8880/admin - Django admin for CRUD API (user `admin` / pass `123`)
 
-### Locust UI
+#### Locust UI
 
 - http://0.0.0.0:8881/ - Locust Master Front-end
 
-### Grafana
+#### Grafana
 
 - http://0.0.0.0:8886/ - Grafana
 
-### Prometheus / exporters
+#### Prometheus / exporters
 
 - http://0.0.0.0:8883/metrics - Metrics from Locust server
 - http://0.0.0.0:8884/metrics - Metrics from Django API Gunicorn server
@@ -37,18 +37,18 @@ Comming soon. See #4.
 
 ## Screenshots
 
-### Django RESTful API Swagger UI
+#### Django RESTful API Swagger UI
 
 ![](./screenshots/api-swagger.png)
 
-### Locust UI
+#### Locust UI
 
 ![](./screenshots/locust-ui.png)
 
-### Grafana Gunicorn Dashboard
+#### Grafana Gunicorn Dashboard
 
 ![](./screenshots/gunicorn-dashboard.png)
 
-### Grafana Locust Dashboard
+#### Grafana Locust Dashboard
 
 ![](./screenshots/locust-dashboard.png)
