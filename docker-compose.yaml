@@ -28,6 +28,11 @@ services:
       mode: replicated
       replicas: 5
 
+  locust-exporter:
+    build: ./prometheus/exporters/locust
+    ports:
+      - "8883:8883"
+
   statsd-exporter:
     build: ./prometheus/exporters/statsd
     ports:
@@ -36,6 +41,7 @@ services:
   prometheus:
     build: ./prometheus
     ports:
-      - 8883:9090
+      - 8885:9090
     depends_on:
       - statsd-exporter
+      - locust-exporter
